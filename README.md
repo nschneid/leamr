@@ -1,10 +1,15 @@
 # LEAMR 
 
-**LEAMR** (**L**inguistically **E**nriched **AMR**, pronounced _lemur_) Alignments is a data release of alignments between AMR and English text for better parsing and probing of many different linguistic phenomena. We also include our code for the LEAMR aligner. For more details, read our paper.
+This repository contains the data and code for **LEAMR** (**L**inguistically **E**nriched **AMR**, pronounced _lemur_), a method for aligning nodes and edges of an AMR graph to spans of the corresponding English sentence.
+Compared to previous approaches, LEAMR achieves high accuracy and coverage, including characterization of special phenomena such as reentrancies.
+Details can be found in
 
-Austin Blodgett and Nathan Schneider. 2021. _Probabilistic, Structure-Aware Algorithms for Improved Variety, Accuracy, and Coverage of AMR Alignments_. In Proceedings of the 59th Annual Meeting ofthe Association for Computational Linguistics.
+- Austin Blodgett and Nathan Schneider. 2021. [Probabilistic, Structure-Aware Algorithms for Improved Variety, Accuracy, and Coverage of AMR Alignments](https://aclanthology.org/2021.acl-long.257). In _Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing_.
+- [Alignment Guidelines](<data-release/Alignment Guidelines.pdf>) included with the data
 
-For other useful resouces for AMR research, also take a look at [AMR-utils](https://github.com/ablodge/amr-utils) and the [AMR Bibliography](https://nert-nlp.github.io/AMR-Bibliography/).
+Alignment data is provided in a stand-off format; to use it requires access to the AMR Release 3.0 corpus distributed by LDC, as described below.
+
+Other resources for AMR research include [AMR-utils](https://github.com/ablodge/amr-utils) and the [AMR Bibliography](https://nert-nlp.github.io/AMR-Bibliography/).
 
 
 # Install
@@ -82,8 +87,13 @@ python train_reentrancy_aligner.py -T <train file>.txt --save-model <model name>
     title = "Probabilistic, Structure-Aware Algorithms for Improved Variety, Accuracy, and Coverage of {AMR} Alignments",
     author = "Blodgett, Austin and
       Schneider, Nathan",
-    booktitle = "Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics",
+    booktitle = "Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)",
     month = aug,
-    year = 2021
+    year = "2021",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.acl-long.257",
+    doi = "10.18653/v1/2021.acl-long.257",
+    pages = "3310--3321"
 }
 ```
